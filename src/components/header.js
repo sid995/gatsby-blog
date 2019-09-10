@@ -28,21 +28,23 @@ class Header extends Component {
     return (
       <div>
         <Navbar fixed="top" light expand="sm">
-          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/team">Team</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/tags">Tags</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
+          <div className="container">
+            <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="/team">Team</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/tags">Tags</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/about">About</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </div>
         </Navbar>
       </div>
     )
